@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './header/Header';
+import SearchBar from './searchBar/SearchBar';
+import FilterBar from './filterBar/FilterBar';
+import BookList from './bookList/BookList';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+export default class App extends React.Component {
+  render(){
+    const apiKey = 'AIzaSyBxP6mes5BaMzxZOL5bw-gJtwwluZ_J9a0'
+    
+    return (
+      <div className="App">
+       <Header />
+       <SearchBar />
+       <FilterBar />
+       <BookList />
+      
+      </div>
   );
+  }
+  
 }
 
-export default App;
+
